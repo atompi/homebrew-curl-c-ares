@@ -79,7 +79,7 @@ class Curl < Formula
       --without-libpsl
       --with-zsh-functions-dir=#{zsh_completion}
       --with-fish-functions-dir=#{fish_completion}
-      --enable-ares
+      --enable-ares=#{Formula["c-ares"].opt_prefix}
     ]
 
     args += if OS.mac?
